@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="background"></div>
+    
+    <div class="container">
+        <header>
+            <h1>WeatherSphere</h1>
+            <div class="theme-toggle">
+                <input type="checkbox" id="toggle-theme">
+                <label for="toggle-theme" class="toggle-label">
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input type="text" id="location-input" placeholder="Enter city or zip code">
+                <button id="search-btn">
+                    <i class="wi wi-day-sunny"></i>
+                    <span>Search</span>
+                </button>
+                <button id="location-btn">
+                    <i class="wi wi-direction-right"></i>
+                    <span>My Location</span>
+                </button>
+            </div>
+
+            <div class="weather-card fade-in">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+                
+                <div class="weather-info">
+                    <div class="location">
+                        <h2 id="city">--</h2>
+                        <p id="country">--</p>
+                        <p id="date">--</p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="temperature">
+                            <div class="weather-icon">
+                                <i id="weather-icon" class="wi wi-day-sunny"></i>
+                            </div>
+                            <div class="temp-value">
+                                <span id="temp">--</span>
+                                <span class="temp-unit">°C</span>
+                            </div>
+                        </div>
+                        
+                        <div class="weather-desc">
+                            <p id="condition">--</p>
+                            <p>Feels like <span id="feels-like">--</span>°C</p>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail">
+                            <i class="wi wi-humidity"></i>
+                            <span id="humidity">--</span>%
+                        </div>
+                        <div class="detail">
+                            <i class="wi wi-strong-wind"></i>
+                            <span id="wind">--</span> km/h
+                        </div>
+                        <div class="detail">
+                            <i class="wi wi-barometer"></i>
+                            <span id="pressure">--</span> hPa
+                        </div>
+                        <div class="detail">
+                            <i class="wi wi-rain"></i>
+                            <span id="precip">--</span> mm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
